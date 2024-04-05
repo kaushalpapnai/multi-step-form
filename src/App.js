@@ -1,10 +1,11 @@
-import DemoComponent from "./DemoComponent";
+import Form from "./components/Form";
 
 
 function App() {
+
   return (
     <div>
-   <DemoComponent />
+     <Form/>
     </div>
   );
 }
