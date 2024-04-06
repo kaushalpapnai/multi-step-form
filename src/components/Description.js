@@ -1,10 +1,11 @@
 // Describes the user's characteristics or preferences.
 
 import React from "react";
-import { useState } from "react";
+import { useState , useContext} from "react";
+import Formcontext from "../formcontext/formContext";
 
 const Description = () => {
-  const [selectedType, setSelectedType] = useState(null);
+  // const [selectedType, setSelectedType] = useState(null);
 
   const userTypes = [
     { id: 1, label: "Student or soon to be enrolled", icon: "👨‍🎓" },
@@ -16,8 +17,10 @@ const Description = () => {
   ];
 
   const handleTypeSelection = (typeId) => {
-    setSelectedType(typeId);
+    setDescription(typeId);
   };
+
+  const {setDescription,description} = useContext(Formcontext)
 
   return (
     <>
@@ -30,7 +33,7 @@ const Description = () => {
           <button
             key={type.id}
             className={`flex items-center justify-start px-4 py-2 rounded-md ${
-              selectedType === type.id
+              description === type.id
                 ? "bg-green-500 text-white"
                 : "bg-gray-200 text-gray-800"
             } hover:bg-green-600 hover:text-white transition-colors`}
