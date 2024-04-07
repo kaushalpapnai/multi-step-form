@@ -5,6 +5,9 @@ const FormContextProvider = ({ children }) => {
   const [description, setDescription] = useState(null);
   const [interestSelection, setInterestSelection] = useState(null);
   const [mathLevel, setMathLevel] = useState(null);
+  const [element, setElement] = useState(1);
+  const [barWidth, setBarWidth] = useState(14.287);
+
 
   return (
     <Formcontext.Provider
@@ -14,7 +17,11 @@ const FormContextProvider = ({ children }) => {
         interestSelection,
         setInterestSelection,
         mathLevel,
-        setMathLevel
+        setMathLevel,
+        element,
+        setElement,
+        barWidth,
+        setBarWidth
       }}
     >
       {children}

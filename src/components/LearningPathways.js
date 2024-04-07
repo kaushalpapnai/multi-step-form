@@ -1,6 +1,6 @@
 import React from 'react';
 
-const LearningPathRecommendations = () => {
+const LearningPathRecommendations = ({nextPage}) => {
   return (
     <div>
       <div >
@@ -11,6 +11,12 @@ const LearningPathRecommendations = () => {
           Finding learning path recommendations for you based on your responses
         </h2>
       </div>
+      <button
+          className="bg-black text-white px-9 py-2 rounded-md hover:bg-opacity-70 transition-colors"
+          onClick={() => nextPage()}
+        >
+          Continue
+        </button>
     </div>
   );
 };
