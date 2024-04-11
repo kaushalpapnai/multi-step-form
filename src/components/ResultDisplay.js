@@ -9,13 +9,17 @@ const LearningPathOptions = () => {
   };
 
   return (
-    <div className="flex flex-col items-center  h-screen justify-center">
-      <h2 className=" md:text-3xl lg:text-3xl text-lg sm:text-2xl font-bold mb-8">
-        Learning paths based on your answers
-      </h2>
-      <p className="text-gray-500 mb-8 text-sm sm:text-sm">
-        Choose one to get started. You can switch anytime.
-      </p>
+    <div className="flex flex-col h-screen items-center mt-24">
+      <div className="flex items-center justify-center">
+        <h2 className=" md:text-3xl text-center lg:text-3xl text-lg sm:text-2xl font-bold mb-8">
+          Learning paths based on your answers
+        </h2>
+      </div>
+      <div className="flex items-center justify-center">
+        <p className="text-gray-500 text-center mb-8 text-sm sm:text-sm">
+          Choose one to get started. You can switch anytime.
+        </p>
+      </div>
       <div className="flex flex-col max-w-[28rem] md:max-w-[100%] lg:max-w-[80%] md:flex-row justify-center items-center">
         <div
           className={`bg-white relative rounded-lg p-6 md:w-[50%] h-[90%] flex justify-center items-center m-2 cursor-pointer border border-gray-200
@@ -36,11 +40,7 @@ const LearningPathOptions = () => {
               Your foundational skills in algebra, geometry, and probability.
             </p>
           </div>
-          <img
-            src={image}
-            className="w-[35%] "
-            alt="Foundational Math"
-          />
+          <img src={image} className="w-[35%] " alt="Foundational Math" />
         </div>
         <div
           className={`bg-white rounded-lg p-5  md:w-[50%] md:h-[90%] sm:h-[50%]  flex justify-center m-2 cursor-pointer items-center border border-gray-200
@@ -53,17 +53,15 @@ const LearningPathOptions = () => {
           onClick={() => handleClick(2)}
         >
           <div className=" mr-1 h-full ">
-            <h3 className="text-md font-bold sm:text-lg ">Mathematical Thinking</h3>
+            <h3 className="text-md font-bold sm:text-lg ">
+              Mathematical Thinking
+            </h3>
             <p className="text-gray-500 text-sm  sm:text-base">
               Build your foundational skills in algebra, geometry, and
               probability.
             </p>
           </div>
-          <img
-            src={image}
-            className="w-[35%] "
-            alt="Mathematical Thinking"
-          />
+          <img src={image} className="w-[35%] " alt="Mathematical Thinking" />
         </div>
       </div>
     </div>

@@ -1,23 +1,31 @@
-import React from 'react';
-import image1 from '../materials/image1.jpeg'
+import React from "react";
+import image1 from "../materials/image1.jpeg";
 
-const ProgressIndicator = ({nextPage}) => {
+const ProgressIndicator = ({ nextPage }) => {
   return (
-    <div className='flex flex-col items-center'>
-      <div className="  flex">
-        <div className=' w-[45%]'>
-          <img src={image1} ></img>
+    <div className="flex flex-col items-center mb-24 md:mt-10">
+      <div className="flex flex-col md:mb-5 md:flex-row items-center justify-center">
+        <div className="w-full md:w-1/2  flex items-center justify-center">
+          <img
+            src={image1}
+            className="w-[19rem] h-fit mt-10 md:mt-0 sm:w-[20rem] "
+            alt="Progress"
+          />
         </div>
-        <div className='w-[55%] p-12'>
-          <h2 className="text-2xl font-bold mb-4">You're on your way!</h2>
-          <div className=" mb-6">
+        <div className="w-full md:w-1/2 p-6 flex  flex-col">
+          <div className="text-start md:mb-6 ">
+            <h2 className="text-2xl text-center md:text-start md:text-2xl text-gray-800 md:w-full font-bold">
+              You're on your way!
+            </h2>
+          </div>
+          <div className="mb-4">
             <div className="flex space-x-2">
               {[1, 2, 3, 4, 5].map((star, index) => (
                 <svg
                   key={index}
-                  className="w-6 h-6 text-orange-400"
+                  className="w-6 h-6 text-orange-400 hidden md:block"
                   viewBox="0 0 24 24"
-                  fill='orange'
+                  fill="orange"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
@@ -31,18 +39,23 @@ const ProgressIndicator = ({nextPage}) => {
               ))}
             </div>
           </div>
-          <p className="text-gray-500 ">
-            "Through its engaging and well-structured courses, Brilliant has taught me mathematical concepts that I previously struggled to understand. I now feel confident approaching both technical job interviews and real world problem solving situations."
-          </p>
-          <p className="text-gray-500 mt-4">— Jacob S.</p>
+          <div className="flex justify-center md:static ">
+            <p className="text-gray-800 w-[95%] sm:w-[70%] md:w-full text-center italic text-sm  md:text-start">
+              "Brilliant’s interactive lessons will start at your level and help
+              you advance. Interactive learning has been shown to be 6x more
+              effective than watching lecture videos."
+            </p>
+          </div>
+          {/* Conditionally render the "Jacob S." paragraph only on medium and large screens */}
+          <p className="text-gray-800 mt-4 hidden md:block">— Jacob S.</p>
         </div>
       </div>
       <button
-          className="bg-black text-white px-9 py-2 rounded-md hover:bg-opacity-70 transition-colors"
-          onClick={() => nextPage()}
-        >
-          Continue
-        </button>
+        className={`bg-black left-5 right-5 bottom-6 fixed sm:static md:w-[12rem] md:min-w-[10rem] sm:min-w-[19.5rem] sm:mt-5 hover:bg-opacity-70 text-white px-9 py-3 rounded-md transition-colors mx-auto max-w-[21rem]`}
+        onClick={() => nextPage()}
+      >
+        Continue
+      </button>
     </div>
   );
 };
