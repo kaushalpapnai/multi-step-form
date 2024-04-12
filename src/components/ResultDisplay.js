@@ -1,14 +1,19 @@
 // Displays the learning path based on the user's answers.
 
-import React, { useState } from "react";
+import React, { useEffect, useState} from "react";
 import image from "../media/MathFoundation.gif";
 
-const LearningPathOptions = () => {
+const LearningPathOptions = ({ nextPage }) => {
   const [selectedOption, setSelectedOption] = useState(0);
 
   const handleClick = (option) => {
     setSelectedOption(option);
   };
+  
+  useEffect(()=>{
+    nextPage()
+  },[])
+
 
   return (
     <div className="flex flex-col h-screen items-center mt-24">

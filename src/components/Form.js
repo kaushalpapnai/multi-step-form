@@ -80,7 +80,7 @@ const Form = () => {
               {loading ? (
                 element === 6 && <LearningPathways />
               ) : (
-                <ResultDisplay />
+                <ResultDisplay nextPage={nextPage}/>
               )}
             </div>
           )}
