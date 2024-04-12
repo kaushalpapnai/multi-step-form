@@ -1,4 +1,6 @@
-import React, { useContext, useState } from "react";
+// Indicates the user's comfort level with math.
+
+import React, { useContext} from "react";
 import Formcontext from "../formcontext/formContext";
 
 const MathComfort = ({ nextPage }) => {

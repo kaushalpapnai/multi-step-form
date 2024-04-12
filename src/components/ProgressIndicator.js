@@ -1,5 +1,7 @@
+// Indicates that the user is progressing through the form.
+
 import React from "react";
-import image1 from "../materials/image1.jpeg";
+import image1 from "../media/image1.jpeg";
 
 const ProgressIndicator = ({ nextPage }) => {
   return (

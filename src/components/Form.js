@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Description from "./Description";
 import InterestSelection from "./InterestSelection";
-import LearningPathways from "./LearningPathways";
+import LearningPathways from "./Loader";
 import MathComfort from "./MathComfort";
 import ProgressIndicator from "./ProgressIndicator";
 import ResultDisplay from "./ResultDisplay";
@@ -42,8 +42,8 @@ const Form = () => {
   return (
     <>
       <div className="relative">
-        <div className="absolute  top-0 left-0 w-full h-9 mt-3 md:mt-6 flex  items-center justify-center">
-          <div className="w-[70%] flex items-center justify-center ">
+        <div className="absolute top-0 left-0 w-full h-9 mt-3 md:mt-6 flex  items-center justify-center">
+          <div className="w-[80%] flex items-center justify-center ">
             {element > 1 && (
               <button
                 className="p-2 flex justify-center "

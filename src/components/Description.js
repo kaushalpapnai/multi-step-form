@@ -1,3 +1,5 @@
+// Describes the user's characteristics or preferences.
+
 import React, { useContext } from "react";
 import Formcontext from "../formcontext/formContext";
 
@@ -44,7 +46,7 @@ const Description = ({ nextPage }) => {
   return (
     <div className="flex flex-col justify-center items-center mb-24  sm:mt-5 md:mt-0 mt-3 p-2">
       <div className="flex justify-center items-center text-center">
-        <h1 className="text-2xl font-medium mb-5 mt-3">
+        <h1 className="text-2xl font-medium mb-5 mt-3 md:font-bold md:text-3xl ">
           Which describes you best?
         </h1>
       </div>
@@ -53,7 +55,7 @@ const Description = ({ nextPage }) => {
           This will help us personalize your experience.
         </p>
       </div>
-      <div className="w-[90%] flex flex-col justify-center items-center box-border">
+      <div className="w-[90%] flex flex-col justify-center items-center box-border md:w-[57%]">
         {userTypes.map((type) => (
           <button
             key={type.id}
@@ -65,25 +67,27 @@ const Description = ({ nextPage }) => {
             onClick={() => handleTypeSelection(type.id)}
           >
             <img className="w-6 mr-5" src={type.url} alt="icon"></img>
-            {type.label.split(" ").length === 1 ? (
-              <span className="font-normal text-sm text-gray-800">
-                {type.label}
-              </span>
-            ) : (
-              <>
-                <span className="font-normal text-sm mr-1 text-gray-800">
-                  {type.label.split(" ")[0]}{" "}
+            <span className="text-start">
+              {type.label.split(" ").length === 1 ? (
+                <span className="font-normaltext-sm text-gray-800">
+                  {type.label}
                 </span>
-                <span className="text-sm text-gray-500">
-                  {type.label.substring(type.label.indexOf(" ") + 1)}
-                </span>
-              </>
-            )}
+              ) : (
+                <>
+                  <span className="font-normal  text-sm mr-1 text-gray-800">
+                    {type.label.split(" ")[0]}{" "}
+                  </span>
+                  <span className="text-sm w-full text-gray-500">
+                    {type.label.substring(type.label.indexOf(" ") + 1)}
+                  </span>
+                </>
+              )}
+            </span>
           </button>
         ))}
       </div>
       <button
-        className={`bg-black left-5 right-5 bottom-6 fixed max-w-[21rem] sm:static md:w-[12rem] md:min-w-[10rem] sm:min-w-[19.5rem] sm:mt-5 text-white px-9 py-3 rounded-md transition-colors ${
+        className={`bg-black left-5 right-5 bottom-6 fixed max-w-[20.5rem] sm:static md:w-[12rem] md:min-w-[10rem] sm:min-w-[19.5rem] sm:mt-5 text-white px-9 py-3 rounded-md transition-colors ${
           !description ? "bg-gray-200 hover:bg-gray-200" : "hover:bg-opacity-70"
         } mx-auto max-w-[90%]`}
         onClick={() => nextPage()}

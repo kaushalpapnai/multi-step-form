@@ -1,5 +1,7 @@
+// Displays the learning path based on the user's answers.
+
 import React, { useState } from "react";
-import image from "../materials/MathFoundation.gif";
+import image from "../media/MathFoundation.gif";
 
 const LearningPathOptions = () => {
   const [selectedOption, setSelectedOption] = useState(0);

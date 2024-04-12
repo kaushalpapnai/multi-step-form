@@ -1,4 +1,6 @@
-import React, { useContext, useState } from "react";
+// Indicates the user's interests or preferences.
+
+import React, { useContext} from "react";
 import Formcontext from "../formcontext/formContext";
 
 const InterestSelection = ({ nextPage }) => {
@@ -42,9 +44,9 @@ const InterestSelection = ({ nextPage }) => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center mt-8 mb-28 p-2  ">
+    <div className="flex flex-col justify-center items-center mt-5 mb-28 p-2  ">
       <div className="flex justify-center items-center text-center ">
-        <h1 className="text-2xl font-medium mb-5 mt-3">
+        <h1 className="text-2xl font-medium mb-5 md:font-bold md:text-3xl">
           Which are you most interested in?
         </h1>
       </div>
@@ -54,7 +56,7 @@ const InterestSelection = ({ nextPage }) => {
           your experience).
         </p>
       </div>
-      <div className="w-[90%] flex flex-col justify-center items-center box-border">
+      <div className="w-[85%] flex flex-col justify-center items-center box-border md:w-[57%]">
         {interests.map((interest) => (
           <button
             key={interest.id}
@@ -73,7 +75,7 @@ const InterestSelection = ({ nextPage }) => {
         ))}
       </div>
       <button
-        className={`bg-black left-5 right-5 bottom-6 fixed max-w-[21rem] sm:static md:w-[12rem] md:min-w-[10rem] sm:min-w-[19.5rem] sm:mt-5 text-white px-9 py-3 rounded-md transition-colors ${
+        className={`bg-black left-5 right-5 bottom-6 fixed max-w-[20.5rem] sm:static md:w-[12rem] md:min-w-[10rem] sm:min-w-[19.5rem] sm:mt-5 text-white px-9 py-3 rounded-md transition-colors ${
           !interestSelection
             ? "bg-gray-200 hover:bg-gray-200"
             : "hover:bg-opacity-70"

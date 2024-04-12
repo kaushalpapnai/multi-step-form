@@ -1,5 +1,7 @@
+// Confirms that the user is in the right place.
+
 import React from "react";
-import Pulley from "../materials/Pulley";
+import Pulley from "../media/Pulley";
 
 const Confirmation = ({ nextPage }) => {
   return (
